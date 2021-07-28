@@ -8,15 +8,16 @@
 
 <body>
     <h1>Rango says... </h1>
+        <h1>here is the about page.</h1>
+        <h3>This tutorial has been put together by </h3><br />
     <div style="font-size: 20px">
-          This tutorial has been put together by<br />
-          <strong>{{ yourname }}</strong><br />
+
+          <strong>{{yourname}}</strong><br />
     </div>
     <div>
-         <a href="/rango/about/">About</a><br />
-         <img src="{% static 'images/dog.jpg'%}"
-              alt="Picture of rango" />  <!--new line-->
-          <img src="{{MEDIA_URL}}cat.jpg">
+         <a href="/rango/">Index</a><br />
+         <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />  <!--new line-->
+         <img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a Cat." />
     </div>
 </body>
 
