@@ -1,3 +1,4 @@
+from typing import ContextManager
 from django.shortcuts import render
 
 from django.http import HttpResponse
@@ -13,5 +14,8 @@ def index(request):
 #def index(request):
  #    return HttpResponse('Rango says hey there partner!'+'<a href=\'/rango/about/\'>About</a>')
 
+#def about(request):
+ #    return HttpResponse('Rango says here is the about page.'+'<a href=\'/rango/\'>Index</a>')
 def about(request):
-     return HttpResponse('Rango says here is the about page.'+'<a href=\'/rango/\'>Index</a>')
+     context1 = {'yourname':'Yueyue Liu'}
+     return render(request, 'rango/about.html', context= context1)
