@@ -11,13 +11,14 @@
         <h3>This tutorial has been put together by </h3><br />
     <div style="font-size: 20px">
 
-          <strong>{{yourname}}</strong><br />
+          <strong>{{ yourname }}</strong><br />
     </div>
+          <p>Visits: {{ visits }}</p>
     <div>
-         <a href="/rango/">Index</a><br />
+         
          <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />  <!--new line-->
          <img src="{{MEDIA_URL}}cat.jpg" alt="Picture of a Cat." />
     </div>
-
+          
 
 {% endblock %}
