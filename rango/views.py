@@ -37,11 +37,12 @@ def index(request):
 def about(request):
      context_dict = {}
      visitor_cookie_handler(request)
+     context_dict = {'yourname':'Yueyue Liu'}
      context_dict['visits'] = request.session['visits']
      #   if request.session.test_cookie_worked():
       #  print("TEST COOKIE WORKED!")
        # request.session.delete_test_cookie()
-     context_dict = {'yourname':'Yueyue Liu'}
+     
      return render(request, 'rango/about.html', context= context_dict)
 
 
