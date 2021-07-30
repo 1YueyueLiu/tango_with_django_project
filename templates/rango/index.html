@@ -3,7 +3,7 @@
 
 
 {% block title_block %}
-      <title>Rango home</title>
+         Rango home
 {% endblock %}
 
 {% block body_block %}
@@ -17,7 +17,7 @@
       <ul>
             {% for category in categories %}
              <!--<li>{{ category.name }}</li>--> 
-             <li><a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a></li>
+             <li><a href="{% url 'rango:show_category' category.slug %}">{{ category.name }}</a></li>
 {% endfor %}
       </ul>
       {% else %} 
